@@ -6,17 +6,17 @@
   padding: 10px;
 }
 
-ul li {
+.book ul li {
   list-style: none;
   margin: 0;
 }
 
-button {
+.book button {
   background-color: inherit;
   border: none;
   cursor: pointer;
 }
 
-button:hover {
+.book button:hover {
   color: cornflowerblue;
 }
