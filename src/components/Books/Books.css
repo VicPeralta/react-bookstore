@@ -1,0 +1,5 @@
+.books-container {
+  display: flex;
+  width: 80%;
+  margin-inline: auto;
+}

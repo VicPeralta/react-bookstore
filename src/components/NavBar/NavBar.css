@@ -1,0 +1,27 @@
+.NavBar {
+  display: flex;
+  justify-content: center;
+  width: 80%;
+  margin-inline: auto;
+}
+
+.link {
+  margin-inline: 10px;
+  text-decoration: none;
+}
+
+.left {
+  display: flex;
+  align-items: center;
+  flex: 50%;
+}
+
+.right {
+  display: flex;
+  flex: 50%;
+  justify-content: right;
+}
+
+.left h1 {
+  margin-right: 20px;
+}
