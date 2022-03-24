@@ -5,11 +5,12 @@
   margin-inline: auto;
 }
 
-label {
+.input-form label {
   width: 200px;
 }
 
-input[type="submit"] {
+.input-form button {
   width: 200px;
+  height: auto;
   margin-top: 30px;
 }

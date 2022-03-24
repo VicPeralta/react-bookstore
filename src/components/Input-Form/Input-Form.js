@@ -10,7 +10,7 @@ const InputForm = () => (
       Author
       <input type="text" name="author" id="author" required />
     </label>
-    <input type="submit" />
+    <button aria-label="submit" type="submit" name="submit" id="submit">Submit</button>
   </form>
 );
 

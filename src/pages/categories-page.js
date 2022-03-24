@@ -1,6 +1,8 @@
+import Categories from '../components/Categories/Categories';
+
 const CategoriesPage = () => (
   <>
-    <button type="button">Check Status</button>
+    <Categories />
   </>
 );
 
