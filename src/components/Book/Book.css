@@ -1,0 +1,22 @@
+
+.book {
+  border: 1px darkgray solid;
+  border-radius: 8px;
+  width: 80%;
+  padding: 10px;
+}
+
+.book ul li {
+  list-style: none;
+  margin: 0;
+}
+
+.book button {
+  background-color: inherit;
+  border: none;
+  cursor: pointer;
+}
+
+.book button:hover {
+  color: cornflowerblue;
+}

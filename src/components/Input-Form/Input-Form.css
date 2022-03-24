@@ -1,0 +1,16 @@
+.input-form {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin-inline: auto;
+}
+
+.input-form label {
+  width: 200px;
+}
+
+.input-form button {
+  width: 200px;
+  height: auto;
+  margin-top: 30px;
+}
