@@ -2,12 +2,18 @@
   display: flex;
   justify-content: center;
   width: 80%;
+  height: 50px;
   margin-inline: auto;
 }
 
 .link {
   margin-inline: 10px;
+  color: #c7c7c7;
   text-decoration: none;
+}
+
+.active {
+  color: #121212;
 }
 
 .left {
@@ -20,8 +26,10 @@
   display: flex;
   flex: 50%;
   justify-content: right;
+  align-items: center;
 }
 
 .left h1 {
   margin-right: 20px;
+  color: #0290ff;
 }

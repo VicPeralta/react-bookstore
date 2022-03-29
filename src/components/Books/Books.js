@@ -6,11 +6,18 @@ const Books = ({ books }) => (
   <div className="books-container">
     {
       books.map((book) => (
-        <Book title={book.title} key={book.id} author={book.author} id={book.id} genre="Action" />
+        <Book
+          title={book.title}
+          key={book.id}
+          author={book.author}
+          id={book.id}
+          genre="Action"
+        />
       ))
     }
   </div>
 );
+
 Books.propTypes = {
   books: PropTypes.arrayOf(PropTypes.shape({
     id: PropTypes.string,

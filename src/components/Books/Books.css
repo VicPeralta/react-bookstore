@@ -1,5 +1,8 @@
 .books-container {
   display: flex;
   width: 80%;
-  margin-inline: auto;
+  flex-wrap: wrap;
+  margin: 20px auto;
+  height: 60vh;
+  overflow-y: auto;
 }

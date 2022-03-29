@@ -25,12 +25,10 @@ const InputForm = (props) => {
   return (
     <form className="input-form">
       <label htmlFor="title">
-        Title
-        <input type="text" name="title" id="title" required />
+        <input type="text" name="title" id="title" required placeholder="Book title" />
       </label>
       <label htmlFor="author">
-        Author
-        <input type="text" name="author" id="author" required />
+        <input type="text" name="author" id="author" required placeholder="Author" />
       </label>
       <button
         aria-label="submit"
@@ -39,7 +37,7 @@ const InputForm = (props) => {
         id="submit"
         onClick={handler}
       >
-        Submit
+        ADD BOOK
       </button>
     </form>
   );
