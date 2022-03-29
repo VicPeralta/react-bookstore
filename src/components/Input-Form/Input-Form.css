@@ -20,3 +20,20 @@
   color: white;
   border: none;
 }
+
+@media (max-width: 360px) {
+  .input-form {
+    flex-direction: column;
+  }
+
+  .input-form button {
+    margin-top: 5px;
+  }
+
+  .input-form input {
+    font-size: 1.1rem;
+    margin-right: 20px;
+    margin-top: 5px;
+    padding: 5px;
+  }
+}
