@@ -1,13 +1,12 @@
-/* eslint-disable no-unused-vars */
-import { configureStore } from '@reduxjs/toolkit';
-import { combineReducers } from 'redux';
-import bookReducer from './books/booksSlice';
-import categoriesReducer from './categories/categoriesSlice';
+import { createStore, combineReducers } from 'redux';
+import bookReducer from './books/books';
+import categoriesReducer from './categories/categories';
 
 const reducer = combineReducers({
-  books: bookReducer,
-  categories: categoriesReducer,
+  bookReducer,
+  categoriesReducer,
 });
-const store = configureStore({ reducer });
+
+const store = createStore(reducer);
 
 export default store;

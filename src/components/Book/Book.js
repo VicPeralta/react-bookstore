@@ -1,7 +1,7 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
 import PropTypes from 'prop-types';
-import { removeBook } from '../../redux/books/booksSlice';
+import { removeBook } from '../../redux/books/books';
 import './Book.css';
 
 const Book = (props) => {
@@ -9,8 +9,8 @@ const Book = (props) => {
     id, genre, author, title,
   } = props;
   const dispatch = useDispatch();
-  const onRemove = (e) => {
-    const bookid = e.target.dataset.id;
+  const onRemoveBook = (event) => {
+    const bookid = event.target.dataset.id;
     dispatch(removeBook({ id: bookid }));
   };
 
@@ -21,7 +21,7 @@ const Book = (props) => {
       <p className="book-author">{author}</p>
       <ul>
         <li><button type="button">Comments </button></li>
-        <li><button type="button" data-id={id} onClick={onRemove}>Remove </button></li>
+        <li><button type="button" data-id={id} onClick={onRemoveBook}>Remove </button></li>
         <li><button type="button">Edit </button></li>
       </ul>
     </div>

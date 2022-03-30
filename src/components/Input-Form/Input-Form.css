@@ -19,6 +19,12 @@
   background-color: #0290ff;
   color: white;
   border: none;
+  cursor: pointer;
+}
+
+.input-form button:hover {
+  font-size: 1.2rem;
+  border: 1px solid #0290ff;
 }
 
 @media (max-width: 360px) {
