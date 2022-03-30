@@ -1,32 +1,76 @@
 const ADD = 'bookstore/books/ADD';
 const REMOVE = 'bookstore/books/REMOVE';
+const GETBOOKLIST_BEGIN = 'bookstore/books/GETLISTBEGIN';
+const GETBOOKLIST_SUCCESS = 'bookstore/books/GETLISTSUCCESS';
 
 const initialState = {
   books: [
-    {
-      id: '1',
-      author: 'Suzanne Collins',
-      title: 'The Hunger Games',
-    },
-    {
-      id: '2',
-      author: 'Frank Herbert',
-      title: 'Dune',
-    },
   ],
 };
 
-export function addBook(book) {
+export function getBooksListSuccess(books) {
   return {
-    type: ADD,
-    payload: book,
+    type: GETBOOKLIST_SUCCESS,
+    payload: books,
+  };
+}
+
+export function getBooksList() {
+  return (dispatch) => {
+    const url = 'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/0xSoJBB3AJG4eMvnXm4c/books';
+    fetch(url).then((response) => (
+      response.json().then((json) => {
+        const books = Object.entries(json).map(([key, value]) => ({
+          id: key,
+          title: value[0].title,
+          author: value[0].author,
+          genre: value[0].category,
+        }));
+        dispatch(getBooksListSuccess(books));
+      })));
   };
 }
 
 export function removeBook(id) {
+  return (dispatch) => {
+    const url = 'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/0xSoJBB3AJG4eMvnXm4c/books';
+    fetch(`${url}/${id.id}`, {
+      method: 'DELETE',
+      body: JSON.stringify({
+        item_id: id.id,
+      }),
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    }).then(() => {
+      dispatch(getBooksList());
+    });
+  };
+}
+
+export function addBook(book) {
+  return (dispatch) => {
+    const url = 'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/0xSoJBB3AJG4eMvnXm4c/books';
+    fetch(url, {
+      method: 'POST',
+      body: JSON.stringify({
+        item_id: book.id,
+        title: book.title,
+        author: book.author,
+        category: 'Science Fiction',
+      }),
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    }).then(() => {
+      dispatch(getBooksList());
+    });
+  };
+}
+
+export function getBooksListBegin() {
   return {
-    type: REMOVE,
-    payload: id,
+    type: GETBOOKLIST_BEGIN,
   };
 }
 
@@ -46,6 +90,10 @@ export default function reducer(state = initialState, action) {
     case REMOVE:
       return {
         books: state.books.filter((book) => (book.id !== action.payload.id)),
+      };
+    case GETBOOKLIST_SUCCESS:
+      return {
+        books: action.payload,
       };
     default: return state;
   }
