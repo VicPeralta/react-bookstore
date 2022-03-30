@@ -4,6 +4,9 @@
   border-radius: 8px;
   width: 80%;
   padding: 10px;
+  background-color: white;
+  margin: 10px 0;
+  height: 150px;
 }
 
 .book ul li {
@@ -15,8 +18,21 @@
   background-color: inherit;
   border: none;
   cursor: pointer;
+  color: #4386bf;
 }
 
 .book button:hover {
-  color: cornflowerblue;
+  color: black;
+}
+
+.book-genre {
+  margin-block: 5px;
+}
+
+.book-title {
+  margin-block: 5px;
+}
+
+.book-author {
+  margin-block: 5px;
 }

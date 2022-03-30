@@ -1,16 +1,45 @@
 .input-form {
   display: flex;
-  flex-direction: column;
   width: 80%;
   margin-inline: auto;
+  align-items: baseline;
 }
 
-.input-form label {
-  width: 200px;
+.input-form input {
+  font-size: 1.2rem;
+  margin-right: 20px;
+  margin-top: 20px;
+  padding: 5px;
 }
 
 .input-form button {
   width: 200px;
-  height: auto;
-  margin-top: 30px;
+  height: 2.4rem;
+  padding: 5px;
+  background-color: #0290ff;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.input-form button:hover {
+  font-size: 1.2rem;
+  border: 1px solid #0290ff;
+}
+
+@media (max-width: 360px) {
+  .input-form {
+    flex-direction: column;
+  }
+
+  .input-form button {
+    margin-top: 5px;
+  }
+
+  .input-form input {
+    font-size: 1.1rem;
+    margin-right: 20px;
+    margin-top: 5px;
+    padding: 5px;
+  }
 }

@@ -1,0 +1,23 @@
+.categories {
+  width: 100%;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.categories button {
+  width: 200px;
+  height: 2.4rem;
+  padding: 5px;
+  background-color: #0290ff;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.categories button:hover {
+  font-size: 1.2rem;
+  border: 1px solid #0290ff;
+}

@@ -1,5 +1,7 @@
-const STATUS = 'STATUS';
-const INITIAL_STATE = [];
+const STATUS = 'bookstore/categories/STATUS';
+const INITIAL_STATE = {
+  status: 'Under construction',
+};
 
 export function checkStatus(id) {
   return {
@@ -11,7 +13,7 @@ export function checkStatus(id) {
 export default function reducer(state = INITIAL_STATE, action) {
   switch (action.type) {
     case STATUS:
-      return 'Under construction';
+      return { status: 'Under construction' };
     default: return state;
   }
 }
