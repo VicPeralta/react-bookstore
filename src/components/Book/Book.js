@@ -16,14 +16,41 @@ const Book = (props) => {
 
   return (
     <div className="book">
-      <p className="book-genre">{genre}</p>
-      <h3 className="book-title">{title}</h3>
-      <p className="book-author">{author}</p>
-      <ul>
-        <li><button type="button">Comments </button></li>
-        <li><button type="button" data-id={id} onClick={onRemoveBook}>Remove </button></li>
-        <li><button type="button">Edit </button></li>
-      </ul>
+      <div className="left">
+        <p className="book-genre">{genre}</p>
+        <h3 className="book-title">{title}</h3>
+        <p className="book-author">{author}</p>
+        <ul>
+          <li><button type="button">Comments </button></li>
+          <li><button type="button" data-id={id} onClick={onRemoveBook}>Remove </button></li>
+          <li><button type="button">Edit </button></li>
+        </ul>
+      </div>
+      <div className="right">
+        <div className="progress">
+          <div className="circle-wrap">
+            <div className="circle">
+              <div className="mask full">
+                <div className="fill" />
+              </div>
+              <div className="mask half">
+                <div className="fill" />
+              </div>
+              <div className="inside-circle" />
+            </div>
+          </div>
+          <div>
+            <p className="percent">75%</p>
+            <p className="completed">Completed</p>
+          </div>
+        </div>
+        <hr />
+        <div className="current-info">
+          <p className="current-chapter">CURRENT CHAPTER</p>
+          <p className="chapter"> Chapter 3: &quot;A Lesson Learned&quot;</p>
+          <button type="button" className="blue-button">UPDATE PROGRESS</button>
+        </div>
+      </div>
     </div>
   );
 };

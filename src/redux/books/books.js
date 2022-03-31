@@ -118,7 +118,7 @@ export function addBook(book) {
         item_id: book.id,
         title: book.title,
         author: book.author,
-        category: 'Science Fiction',
+        category: book.genre,
       }),
       headers: {
         'Content-Type': 'application/json',

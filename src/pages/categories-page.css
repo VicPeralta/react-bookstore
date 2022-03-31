@@ -8,13 +8,16 @@
 }
 
 .categories button {
-  width: 200px;
-  height: 2.4rem;
-  padding: 5px;
-  background-color: #0290ff;
-  color: white;
-  border: none;
+  width: 11.5rem;
+  height: 2.813rem;
+  margin: 1.188rem 0 0 2.125rem;
+  padding: 0.801rem 1.188rem 0.886rem 1.375rem;
+  border-radius: 3px;
+  background-color: var(--azure);
+  color: #fff;
   cursor: pointer;
+  border: none;
+  font-size: 1.2rem;
 }
 
 .categories button:hover {
