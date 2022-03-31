@@ -28,9 +28,19 @@ const Book = (props) => {
       </div>
       <div className="right">
         <div className="progress">
-          <div className="circle" />
+          <div className="circle-wrap">
+            <div className="circle">
+              <div className="mask full">
+                <div className="fill" />
+              </div>
+              <div className="mask half">
+                <div className="fill" />
+              </div>
+              <div className="inside-circle" />
+            </div>
+          </div>
           <div>
-            <p className="percent">64%</p>
+            <p className="percent">75%</p>
             <p className="completed">Completed</p>
           </div>
         </div>
