@@ -11,8 +11,8 @@
 - Javascript
 - React
 
-## Live Demo (If avilable)
-[GitHub](https://vicperalta.github.io/react-bookstore/)   
+## Live Demo
+[Bookstore](https://vicperalta.github.io/react-bookstore/)   
 
 ### Desktop version
 <img src="./bookStore.gif" width="100%" height="auto"/>
