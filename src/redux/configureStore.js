@@ -10,7 +10,7 @@ const reducer = combineReducers({
 
 const myLogger = () => (next) => (action) => {
   // uncomment for debugging
-  console.info(action);
+  // console.info(action);
   next(action);
 };
 const store = createStore(reducer, {}, applyMiddleware(thunk, myLogger));
