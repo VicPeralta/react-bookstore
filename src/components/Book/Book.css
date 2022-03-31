@@ -5,6 +5,24 @@
   background-color: white;
   height: 10.625rem;
   padding: 2rem 1.688rem;
+  display: flex;
+}
+
+.book .right {
+  display: flex;
+  justify-content: center;
+  flex: 3;
+}
+
+hr {
+  height: 5rem;
+}
+
+.book .left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex: 2;
 }
 
 .book ul li {
@@ -19,7 +37,7 @@ ul li:first-child {
   padding-left: 0;
 }
 
-.book button {
+.book ul li button {
   background-color: inherit;
   border: none;
   cursor: pointer;
@@ -67,4 +85,85 @@ ul li:first-child {
   letter-spacing: normal;
   margin: 0.25rem 0 0;
   color: var(--cool-blue);
+}
+
+.progress {
+  display: flex;
+  align-items: center;
+}
+
+.circle {
+  background-color: var(--azure);
+  border-radius: 50%;
+  width: 4rem;
+  height: 4rem;
+  margin-inline-end: 3rem;
+}
+
+.percent {
+  margin: 0.063rem 7.063rem 0 0.688rem;
+  font-family: Montserrat, Arial, Helvetica, sans-serif;
+  font-size: 2rem;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: var(--black-two);
+}
+
+.current-chapter {
+  margin: 0.063rem 5.375rem 0 3.688rem;
+  opacity: 0.5;
+  font-family: Roboto, Arial, Helvetica, sans-serif;
+  font-size: 0.813rem;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: var(--black-two);
+}
+
+.chapter {
+  margin: 0.438rem 0 0.25rem 3.688rem;
+  font-family: Roboto, Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.4px;
+  color: var(--black-two);
+}
+
+.completed {
+  margin: 0.438rem 4.938rem 0.75rem 0.75rem;
+  opacity: 0.5;
+  font-family: Montserrat, Arial, Helvetica, sans-serif;
+  font-size: 0.875rem;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: var(--black-two);
+}
+
+.blue-button {
+  width: 11.5rem;
+  height: 2.813rem;
+  margin: 0.75rem 1.75rem 0.563rem 3.688rem;
+  padding: 0.801rem 1.188rem 0.886rem 1.375rem;
+  border-radius: 3px;
+  background-color: var(--azure);
+  color: #fff;
+  cursor: pointer;
+  border: none;
+}
+
+.current-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }

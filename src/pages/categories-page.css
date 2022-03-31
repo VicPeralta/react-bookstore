@@ -16,6 +16,8 @@
   background-color: var(--azure);
   color: #fff;
   cursor: pointer;
+  border: none;
+  font-size: 1.2rem;
 }
 
 .categories button:hover {

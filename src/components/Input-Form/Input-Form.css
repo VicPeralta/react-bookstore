@@ -37,6 +37,7 @@ option {
   background-color: var(--azure);
   color: #fff;
   cursor: pointer;
+  border: none;
 }
 
 .input-form > button:hover {
