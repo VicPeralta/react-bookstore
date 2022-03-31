@@ -1,5 +1,12 @@
 h2 {
-  width: 80%;
+  width: 80rem;
   margin-inline: auto;
-  color: #888;
+  font-family: Montserrat, Arial, Helvetica, sans-serif;
+  font-size: 1.25rem;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.18px;
+  color: var(--warm-grey);
 }

@@ -11,7 +11,7 @@ const Books = ({ books }) => (
           key={book.id}
           author={book.author}
           id={book.id}
-          genre="Action"
+          genre={book.genre}
         />
       ))
     }

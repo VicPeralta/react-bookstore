@@ -1,5 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import { FaUser } from 'react-icons/fa';
 import './NavBar.css';
 
 const links = [
@@ -33,7 +34,7 @@ const NavBar = () => (
       </div>
     </div>
     <div className="right">
-      <p>login</p>
+      <p className="user"><FaUser /></p>
     </div>
   </nav>
 );
