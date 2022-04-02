@@ -2,6 +2,7 @@ import React from 'react';
 import { useDispatch } from 'react-redux';
 import PropTypes from 'prop-types';
 import { removeBook } from '../../redux/books/books';
+import ProgressCircle from '../ProgressCircle/progressCircle';
 import './Book.css';
 
 const Book = (props) => {
@@ -28,17 +29,7 @@ const Book = (props) => {
       </div>
       <div className="right">
         <div className="progress">
-          <div className="circle-wrap">
-            <div className="circle">
-              <div className="mask full">
-                <div className="fill" />
-              </div>
-              <div className="mask half">
-                <div className="fill" />
-              </div>
-              <div className="inside-circle" />
-            </div>
-          </div>
+          <ProgressCircle />
           <div>
             <p className="percent">75%</p>
             <p className="completed">Completed</p>
