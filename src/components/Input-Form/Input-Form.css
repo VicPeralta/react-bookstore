@@ -1,6 +1,6 @@
 .input-form {
   display: flex;
-  width: 83rem;
+  width: 90%;
   margin-inline: auto;
   align-items: baseline;
 }
@@ -8,7 +8,7 @@
 .input-form input,
 select {
   font-size: 1.2rem;
-  width: 32rem;
+  width: 30%;
   height: 2.813rem;
   margin: 1.188rem 2.125rem 0 0;
   padding: 0.813rem 1.063rem 0.813rem 1.063rem;
@@ -48,16 +48,25 @@ option {
 @media (max-width: 360px) {
   .input-form {
     flex-direction: column;
+    width: 90%;
+    margin-inline: auto;
   }
 
   .input-form button {
     margin-top: 5px;
+    margin-inline: auto;
   }
 
   .input-form input {
     font-size: 1.1rem;
-    margin-right: 20px;
     margin-top: 5px;
     padding: 5px;
+    width: 100%;
+  }
+
+  .input-form input,
+  select {
+    font-size: 1.2rem;
+    width: 100%;
   }
 }

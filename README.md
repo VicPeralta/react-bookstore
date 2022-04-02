@@ -16,6 +16,11 @@
 
 ### Desktop version
 <img src="./bookStore.gif" width="100%" height="auto"/>
+
+### Mobile screen capture
+<img src="./mobile.png" height="auto" width="40%">   
+<img src="./tablet.png" height="30%">   
+
 ## Getting Started
 
 To get a local copy follow these simple example steps.  
