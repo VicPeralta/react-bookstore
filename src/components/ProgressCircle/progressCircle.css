@@ -1,0 +1,82 @@
+.mask,
+.circle-wrap {
+  --rotation: 135deg;
+}
+
+/* Clip circle left part
+  and fill the other part blue
+  Just the fill circle
+*/
+.mask .fill {
+  clip: rect(0, 50px, 100px, 0);
+  background-color: var(--azure);
+}
+
+.circle .fill {
+  animation: fill ease-in-out 3s;
+  transform: rotate(var(--rotation));
+}
+
+.circle-wrap {
+  width: 100px;
+  height: 100px;
+  background: var(--white);
+  border-radius: 50%;
+  border: 1px solid #cdcbd0;
+}
+
+/* We have 3 style circles: circle-wrap, mask and fill
+  same size and color
+  And there are 5 circles
+        circle-wrap
+            mask-full
+              fill
+            mask-half
+              fill
+ */
+.circle-wrap .circle .mask,
+.circle-wrap .circle .fill {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+/* Fill 50% */
+.mask.full {
+  animation: fill ease-in-out 3s;
+  transform: rotate(var(--rotation));
+}
+
+/*
+  clip right side of circles
+*/
+.circle-wrap .circle .mask {
+  clip: rect(0, 100px, 100px, 50px);
+}
+
+@keyframes fill {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(var(--rotation));
+  }
+}
+
+.circle-wrap .inside-circle {
+  width: 80px;
+  height: 80px;
+  margin-top: 10px;
+  margin-left: 10px;
+  border-radius: 50%;
+  background: var(--white);
+  line-height: 120px;
+  text-align: center;
+  color: var(--azure);
+  position: absolute;
+  z-index: 100;
+  font-weight: 700;
+  font-size: 2em;
+}

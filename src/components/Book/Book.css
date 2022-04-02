@@ -1,7 +1,7 @@
 .book {
   border: 1px darkgray solid;
   border-radius: 8px;
-  width: 83rem;
+  width: 90%;
   background-color: white;
   height: 10.625rem;
   padding: 2rem 1.688rem;
@@ -71,7 +71,6 @@ ul li:first-child {
   font-style: normal;
   line-height: normal;
   letter-spacing: -0.2px;
-  margin: 0.188rem 20.188rem 0 0;
   color: var(--black-two);
 }
 
@@ -161,61 +160,52 @@ ul li:first-child {
   align-items: flex-start;
 }
 
-.circle-wrap {
-  margin: 150px auto;
-  width: 100px;
-  height: 100px;
-  background: #fefcff;
-  border-radius: 50%;
-  border: 1px solid #cdcbd0;
-}
-
-.mask .fill {
-  clip: rect(0, 50px, 100px, 0);
-  background-color: var(--azure);
-}
-
-.mask.full,
-.circle .fill {
-  animation: fill ease-in-out 2s;
-  transform: rotate(135deg);
-}
-
-.circle-wrap .circle .mask,
-.circle-wrap .circle .fill {
-  width: 100px;
-  height: 100px;
-  position: absolute;
-  border-radius: 50%;
-}
-
-.circle-wrap .circle .mask {
-  clip: rect(0, 100px, 100px, 50px);
-}
-
-@keyframes fill {
-  0% {
-    transform: rotate(0deg);
+@media (max-width: 640px) {
+  .book {
+    flex-direction: column;
+    height: auto;
   }
 
-  100% {
-    transform: rotate(135deg);
+  hr {
+    display: none;
   }
-}
 
-.circle-wrap .inside-circle {
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  background: var(--white);
-  line-height: 120px;
-  text-align: center;
-  margin-top: 10px;
-  margin-left: 10px;
-  color: #1e51dc;
-  position: absolute;
+  .book .left {
+    width: 90%;
+    flex: 1;
+  }
 
-  /* z-index: 100; */
-  font-weight: 500;
-  font-size: 2em;
+  .book .right {
+    width: 100%;
+    flex-direction: column;
+    flex: 1;
+    justify-content: left;
+    align-items: center;
+  }
+
+  .book .progress {
+    flex-direction: row;
+    margin-top: 10px;
+  }
+
+  .percent,
+  .completed {
+    margin: 0;
+    margin-left: 20px;
+  }
+
+  .right .current-info {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .current-info .current-chapter,
+  .current-info .chapter {
+    margin: 2px 0;
+  }
+
+  .blue-button {
+    margin: 0;
+    margin-top: 10px;
+  }
 }
