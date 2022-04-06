@@ -4,8 +4,6 @@ import InputForm from '../components/Input-Form/Input-Form';
 import './books-page.css';
 
 const BooksPage = () => {
-  // const dispatch = useDispatch();
-  // useEffect(() => { dispatch(getBooksList()); }, []);
   const books = useSelector((state) => (state.bookReducer.books));
   return (
     <>

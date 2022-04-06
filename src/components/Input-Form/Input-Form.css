@@ -45,7 +45,7 @@ option {
   border: 1px solid #0290ff;
 }
 
-@media (max-width: 360px) {
+@media (max-width: 415px) {
   .input-form {
     flex-direction: column;
     width: 90%;

@@ -57,7 +57,7 @@
   font-weight: bold;
 }
 
-@media (max-width: 360px) {
+@media (max-width: 415px) {
   .NavBar .left {
     flex: 1;
     flex-direction: column;
